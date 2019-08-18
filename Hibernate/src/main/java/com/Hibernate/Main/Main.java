@@ -14,6 +14,7 @@ import org.hibernate.cfg.Configuration;
 
 import com.Hibernate.Annotation.FruitPrimaryKey;
 import com.Hibernate.Annotation.Fruits;
+import com.Hibernate.OneToOneMapping.StudentDetail;
 import com.Hibernate.TableCreate.Employee;
 import com.Hibernate.TableCreate.Student;
 import com.Hiberntate.HibernateUtil.HibernateUtil;
@@ -39,14 +40,27 @@ public class Main {
 		 * fruits.setDeliveryDate(new Date());
 		 */
 		//FruitPrimaryKey Details
-		FruitPrimaryKey fruitPrimaryKey=new FruitPrimaryKey();
-		fruitPrimaryKey.setFruitName("CrusterApple");
-		FruitPrimaryKey fruitPrimaryKey1=new FruitPrimaryKey();
-		fruitPrimaryKey1.setFruitName("PineApple");
+		/*
+		 * FruitPrimaryKey fruitPrimaryKey=new FruitPrimaryKey();
+		 * fruitPrimaryKey.setFruitName("CrusterApple"); FruitPrimaryKey
+		 * fruitPrimaryKey1=new FruitPrimaryKey();
+		 * fruitPrimaryKey1.setFruitName("PineApple");
+		 */
+		//Student and StudentDetail class
+		com.Hibernate.OneToOneMapping.Student studentt=new com.Hibernate.OneToOneMapping.Student();
+		studentt.setStudent_name("Manmath M");
+		
+		StudentDetail studentDetail=new StudentDetail();
+		studentDetail.setStudent_mobile_nuumber("92XXXX92XX");
+		//This is an important step
+		studentDetail.setStudent(studentt);
 		
 		HibernateUtil hibernateUtil=new HibernateUtil();
-			hibernateUtil.Hibernate(fruitPrimaryKey1);
-			hibernateUtil.Hibernate(fruitPrimaryKey);
+		hibernateUtil.Hibernate(studentDetail);
+		/*
+		 * hibernateUtil.Hibernate(fruitPrimaryKey1);
+		 * hibernateUtil.Hibernate(fruitPrimaryKey);
+		 */
 		//hibernateUtil.Hibernate(fruits);
 		//hibernateUtil.Hibernate(employee);
 		//hibernateUtil.Hibernate(student);
