@@ -24,7 +24,7 @@ public class HibernateUtil {
 		Session session = sessionFactory.openSession();
 		Transaction tx = session.beginTransaction();
 
-		session.saveOrUpdate(object);
+		session.save(object);
 		tx.commit();
 		session.close();
 		sessionFactory.close();
