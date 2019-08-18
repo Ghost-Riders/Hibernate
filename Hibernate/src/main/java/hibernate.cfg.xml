@@ -28,6 +28,7 @@
  
         <!-- Mention here all the model classes along with their package name -->
  		<mapping class="com.Hibernate.TableCreate.Student"/>
+ 		<mapping class="com.Hibernate.TableCreate.Employee"/>
  		
  		 
     </session-factory>
