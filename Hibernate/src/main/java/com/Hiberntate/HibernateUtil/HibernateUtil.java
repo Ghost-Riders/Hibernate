@@ -26,6 +26,8 @@ public class HibernateUtil {
 
 		session.save(object);
 		tx.commit();
+		session.close();
+		sessionFactory.close();
 
 	}
 }
