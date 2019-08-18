@@ -24,22 +24,24 @@
         <property name="show_sql">true</property>
 
        		 <!-- Drop the existing tables and create new one -->
-<!--    <property name="hbm2ddl.auto">create</property> -->
+   <property name="hbm2ddl.auto">create</property>
        		 <!-- explicitly closed session factory the schema will be deleted -->
 <!--    <property name="hbm2ddl.auto">create-drop</property> -->
       		  <!-- it will check if matching data is not found then it will normally
       		  runs the program if found it will throw an exception -->
 <!--  	<property name="hbm2ddl.auto">validate</property> -->
  				<!-- Create & update existing data -->
- 	<property name="hbm2ddl.auto">update</property>
+<!--  	<property name="hbm2ddl.auto">update</property> -->
  
         <!-- Mention here all the model classes along with their package name -->
  		<!-- <mapping class="com.Hibernate.TableCreate.Student"/>
  		<mapping class="com.Hibernate.TableCreate.Employee"/>
  		<mapping class="com.Hibernate.Annotation.Fruits"/>
  		<mapping class="com.Hibernate.Annotation.FruitPrimaryKey"/> -->
- 		<mapping class="com.Hibernate.OneToOneMapping.Student"/>
- 		<mapping class="com.Hibernate.OneToOneMapping.StudentDetail"/>
+ 		<!-- <mapping class="com.Hibernate.OneToOneMapping.Student"/>
+ 		<mapping class="com.Hibernate.OneToOneMapping.StudentDetail"/> -->
+ 		<mapping class="com.Hibernate.OneToOneMappingUniBidirectional.Order"/>
+ 		<mapping class="com.Hibernate.OneToOneMappingUniBidirectional.OrderDetail"/>
  		 
     </session-factory>
 </hibernate-configuration>
