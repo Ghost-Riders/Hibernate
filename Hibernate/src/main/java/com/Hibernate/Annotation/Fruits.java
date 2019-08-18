@@ -1,9 +1,13 @@
 package com.Hibernate.Annotation;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 
 @Entity
@@ -19,6 +23,9 @@ public class Fruits {
 	@Transient //Ignore this field for column creation
 	@Column(name="Fruit_Delivery")
 	private String FruitDelivery;
+	
+	@Temporal(TemporalType.TIMESTAMP)//Type-DATE:to set only date not time||Type-TIME: to set time only||Type-TIMESTAMP: to set time and date
+	private Date DeliveryDate;
 
 	public int getFruitCount() {
 		return FruitCount;
@@ -42,6 +49,14 @@ public class Fruits {
 
 	public void setFruitDelivery(String fruitDelivery) {
 		FruitDelivery = fruitDelivery;
+	}
+
+	public Date getDeliveryDate() {
+		return DeliveryDate;
+	}
+
+	public void setDeliveryDate(Date deliveryDate) {
+		DeliveryDate = deliveryDate;
 	}
 	
 	
