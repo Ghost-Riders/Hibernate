@@ -20,15 +20,16 @@ public class Main {
 		// TODO Auto-generated method stub
 		//Student Details
 		Student student=new Student();
-		student.setId(1);
+		student.setId(2);
 		student.setName("Manmath M");
 		
 		//Employee details
-		Employee employee=new Employee(10, "Manmath M");
-		
+		Employee employee=new Employee();
+		employee.setEid(11);
+		employee.setEname("Manmath M");
 		HibernateUtil hibernateUtil=new HibernateUtil();
 		hibernateUtil.Hibernate(employee);
-		hibernateUtil.Hibernate(student);
+		//hibernateUtil.Hibernate(student);
 	
 	
 	}
