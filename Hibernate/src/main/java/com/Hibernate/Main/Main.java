@@ -10,36 +10,27 @@ import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 
+import com.Hibernate.TableCreate.Employee;
 import com.Hibernate.TableCreate.Student;
+import com.Hiberntate.HibernateUtil.HibernateUtil;
 
 public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		//Student Details
 		Student student=new Student();
-		student.setId(10);
-		student.setName("manmath");
+		student.setId(1);
+		student.setName("Manmath M");
 		
-//		Configuration con=new Configuration().addResource("hibernate.cfg.xml");
-//		SessionFactory sessionFactory=con.buildSessionFactory();
-//		Session session=sessionFactory.openSession();
-//		Transaction tx=session.beginTransaction();
-//		session.save(student);
-//		tx.commit();
+		//Employee details
+		Employee employee=new Employee(10, "Manmath M");
+		
+		HibernateUtil hibernateUtil=new HibernateUtil();
+		hibernateUtil.Hibernate(employee);
+		hibernateUtil.Hibernate(student);
 	
-		StandardServiceRegistry standardregistry=new StandardServiceRegistryBuilder().configure("hibernate.cfg.xml").build();
-		
-		Metadata metadata=new MetadataSources(standardregistry).getMetadataBuilder().build();
-		
-		SessionFactoryBuilder sessionFactoryBuilder=metadata.getSessionFactoryBuilder();
-		
-		SessionFactory sessionFactory=sessionFactoryBuilder.build();
-		
-		Session session=sessionFactory.openSession();
-		Transaction tx=session.beginTransaction();
-		session.save(student);
-		tx.commit();
-
+	
 	}
 
 }
