@@ -12,7 +12,7 @@
         <property name="connection.password">welcome</property>
         
         <!-- JDBC connection pool (use the built-in) -->
-        <property name="connection.pool_size">1</property>
+        <property name="connection.pool_size">2</property>
         
         <!-- SQL dialect -->
         <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
@@ -37,6 +37,7 @@
  		<mapping class="com.Hibernate.TableCreate.Student"/>
  		<mapping class="com.Hibernate.TableCreate.Employee"/>
  		<mapping class="com.Hibernate.Annotation.Fruits"/>
+ 		<mapping class="com.Hibernate.Annotation.FruitPrimaryKey"/>
  		
  		 
     </session-factory>
