@@ -61,7 +61,7 @@ public class Main {
 		// Order and OrderDetail class
 		Order order = new Order();
 		order.setOrderName("Pizza");
-		
+
 		OrderDetail orderDetail = new OrderDetail();
 		orderDetail.setOrderStatus("Cooking");
 		orderDetail.setOrder(order);
