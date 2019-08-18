@@ -34,11 +34,12 @@
  	<property name="hbm2ddl.auto">update</property>
  
         <!-- Mention here all the model classes along with their package name -->
- 		<mapping class="com.Hibernate.TableCreate.Student"/>
+ 		<!-- <mapping class="com.Hibernate.TableCreate.Student"/>
  		<mapping class="com.Hibernate.TableCreate.Employee"/>
  		<mapping class="com.Hibernate.Annotation.Fruits"/>
- 		<mapping class="com.Hibernate.Annotation.FruitPrimaryKey"/>
- 		
+ 		<mapping class="com.Hibernate.Annotation.FruitPrimaryKey"/> -->
+ 		<mapping class="com.Hibernate.OneToOneMapping.Student"/>
+ 		<mapping class="com.Hibernate.OneToOneMapping.StudentDetail"/>
  		 
     </session-factory>
 </hibernate-configuration>
