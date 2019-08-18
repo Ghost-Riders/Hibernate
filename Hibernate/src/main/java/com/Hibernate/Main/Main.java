@@ -12,6 +12,7 @@ import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 
+import com.Hibernate.Annotation.FruitPrimaryKey;
 import com.Hibernate.Annotation.Fruits;
 import com.Hibernate.TableCreate.Employee;
 import com.Hibernate.TableCreate.Student;
@@ -31,14 +32,22 @@ public class Main {
 		 * Employee employee=new Employee(); employee.setEid(11);
 		 * employee.setEname("Manmath M");
 		 */
-		Fruits fruits=new Fruits();
-		fruits.setFruitCount(10);
-		fruits.setFruitName("Apple");
-		fruits.setFruitDelivery("New Dehli");
-		fruits.setDeliveryDate(new Date());
+		//Fruit Details
+		/*
+		 * Fruits fruits=new Fruits(); fruits.setFruitCount(10);
+		 * fruits.setFruitName("Apple"); fruits.setFruitDelivery("New Dehli");
+		 * fruits.setDeliveryDate(new Date());
+		 */
+		//FruitPrimaryKey Details
+		FruitPrimaryKey fruitPrimaryKey=new FruitPrimaryKey();
+		fruitPrimaryKey.setFruitName("CrusterApple");
+		FruitPrimaryKey fruitPrimaryKey1=new FruitPrimaryKey();
+		fruitPrimaryKey1.setFruitName("PineApple");
 		
 		HibernateUtil hibernateUtil=new HibernateUtil();
-		hibernateUtil.Hibernate(fruits);
+			hibernateUtil.Hibernate(fruitPrimaryKey1);
+			hibernateUtil.Hibernate(fruitPrimaryKey);
+		//hibernateUtil.Hibernate(fruits);
 		//hibernateUtil.Hibernate(employee);
 		//hibernateUtil.Hibernate(student);
 	
