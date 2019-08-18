@@ -1,5 +1,7 @@
 package com.Hibernate.Main;
 
+import java.util.Date;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -30,9 +32,10 @@ public class Main {
 		 * employee.setEname("Manmath M");
 		 */
 		Fruits fruits=new Fruits();
-		fruits.setFruitCount(12);
+		fruits.setFruitCount(10);
 		fruits.setFruitName("Apple");
 		fruits.setFruitDelivery("New Dehli");
+		fruits.setDeliveryDate(new Date());
 		
 		HibernateUtil hibernateUtil=new HibernateUtil();
 		hibernateUtil.Hibernate(fruits);
