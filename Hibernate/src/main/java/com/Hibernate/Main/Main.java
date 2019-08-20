@@ -25,30 +25,30 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		// Student Details
+		// Student Details from Package TableCreate
 		/*
 		 * Student student=new Student(); student.setId(2);
 		 * student.setName("Manmath M");
 		 */
-		// Employee details
+		// Employee details from Package TableCreate
 		/*
 		 * Employee employee=new Employee(); employee.setEid(11);
 		 * employee.setEname("Manmath M");
 		 */
-		// Fruit Details
+		// Fruit Details from Package Annotation
 		/*
 		 * Fruits fruits=new Fruits(); fruits.setFruitCount(10);
 		 * fruits.setFruitName("Apple"); fruits.setFruitDelivery("New Dehli");
 		 * fruits.setDeliveryDate(new Date());
 		 */
-		// FruitPrimaryKey Details
+		// FruitPrimaryKey Details from Package Annotation
 		/*
 		 * FruitPrimaryKey fruitPrimaryKey=new FruitPrimaryKey();
 		 * fruitPrimaryKey.setFruitName("CrusterApple"); FruitPrimaryKey
 		 * fruitPrimaryKey1=new FruitPrimaryKey();
 		 * fruitPrimaryKey1.setFruitName("PineApple");
 		 */
-		// Student and StudentDetail class
+		// Student and StudentDetail class from Package OneToOneMapping
 		/*
 		 * com.Hibernate.OneToOneMapping.Student studentt=new
 		 * com.Hibernate.OneToOneMapping.Student();
@@ -58,16 +58,18 @@ public class Main {
 		 * studentDetail.setStudent_mobile_nuumber("92XXXX92XX"); //This is an important
 		 * step studentDetail.setStudent(studentt);
 		 */
-		// Order and OrderDetail class
-		Order order = new Order();
-		order.setOrderName("Pizza");
-
-		OrderDetail orderDetail = new OrderDetail();
-		orderDetail.setOrderStatus("Cooking");
-		orderDetail.setOrder(order);
+		// Order and OrderDetail class from Package OneToOneMappingUniBidirectional
+		/*
+		 * Order order = new Order(); order.setOrderName("Pizza");
+		 * 
+		 * OrderDetail orderDetail = new OrderDetail();
+		 * orderDetail.setOrderStatus("Cooking"); orderDetail.setOrder(order);
+		 * 
+		 * order.setOrderDetail(orderDetail);
+		 */
 
 		HibernateUtil hibernateUtil = new HibernateUtil();
-		hibernateUtil.Hibernate(orderDetail);
+		// hibernateUtil.Hibernate(orderDetail);
 		// hibernateUtil.Hibernate(studentDetail);
 		/*
 		 * hibernateUtil.Hibernate(fruitPrimaryKey1);
