@@ -14,6 +14,8 @@ import org.hibernate.cfg.Configuration;
 
 import com.Hibernate.Annotation.FruitPrimaryKey;
 import com.Hibernate.Annotation.Fruits;
+import com.Hibernate.ManyToOneMapping.Campus;
+import com.Hibernate.ManyToOneMapping.Institute;
 import com.Hibernate.OneToOneMapping.StudentDetail;
 import com.Hibernate.OneToOneMappingUniBidirectional.Order;
 import com.Hibernate.OneToOneMappingUniBidirectional.OrderDetail;
@@ -67,8 +69,23 @@ public class Main {
 		 * 
 		 * order.setOrderDetail(orderDetail);
 		 */
-
+		//institute & campus class from package ManyToOneMapping
+		
+		Institute institute=new Institute();
+		institute.setInstitute_name("IIT");
+		
+		Campus campus=new Campus();
+		campus.setCampus_name("PUNE");
+		campus.setInstitute(institute);
+		
+		Campus campus2=new Campus();
+		campus2.setCampus_name("NANDED");
+		campus2.setInstitute(institute);
+		
 		HibernateUtil hibernateUtil = new HibernateUtil();
+		hibernateUtil.Hibernate(campus);
+		hibernateUtil.Hibernate(campus2);
+		
 		// hibernateUtil.Hibernate(orderDetail);
 		// hibernateUtil.Hibernate(studentDetail);
 		/*
