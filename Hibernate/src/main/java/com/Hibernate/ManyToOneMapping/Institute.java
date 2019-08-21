@@ -11,7 +11,7 @@ import javax.persistence.Table;
 public class Institute {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@GeneratedValue
 	private int institute_id;
 	private String institute_name;
 
